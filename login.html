@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mit Google anmelden</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <header>
+    <h1>YuGaming.com</h1>
+    <div class="header-buttons">
+      <button onclick="handleAbout()">About</button>
+      <button onclick="handleHype()">Hype</button>
+      <button onclick="handleExclusive()">Exclusive</button>
+      <button onclick="handleGL()">GameLounch</button>
+      <button onclick="handleYV()">YuVideo</button>
+      <button onclick="handleLogin()">Login</button>
+      <button onclick="handleContact()">Kontakt</button>
+      <div id="profile-container"></div>
+    </div>
+  </header>
+
+  <div class="content-box">
+    <h2>Mit Google anmelden</h2>
+
+    <div id="g_id_onload"
+         data-client_id="610073296366-6mjl5acjuha8u40h5kb6sp31agoecuf3.apps.googleusercontent.com"
+         data-context="signin"
+         data-ux_mode="popup"
+         data-callback="handleCredentialResponse"
+         data-auto_prompt="true">
+    </div>
+
+    <div class="g_id_signin"
+         data-type="standard"
+         data-size="large"
+         data-theme="filled_black"
+         data-text="signin_with"
+         data-shape="rectangular"
+         data-logo_alignment="left">
+    </div>
+
+    <div id="user-info" style="margin-top: 30px;"></div>
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      <p>&copy; 2025 YuGaming.com</p>
+    </div>
+    <div class="footer-right">
+      <button onclick="openDiscord()">
+        <img src="https://imgs.search.brave.com/79gSAO3fU4RcomLqGgMFbnN8z_OQiMvR97l6Uo9IswI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy82/MmIyMjYxZjAzOGFh/ZDRkM2VkN2NhNDgu/cG5n" alt="Discord" class="icon" /> Discord
+      </button>
+      <button onclick="openYouTube()">
+        <img src="https://imgs.search.brave.com/xKh55Zi1RcV3lT8bA53unw-vWurfOWkT-K17X5LzzFc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LXlvdXR1YmUtaWNv/bi1kb3dubG9hZC1p/bi1zdmctcG5nLWdp/Zi1maWxlLWZvcm1h/dHMtLWxvZ28tc29j/aWFsLW1lZGlhLWlj/b25zLWNvbG9yLXBh/Y2stbG9nb3MtNDMy/NTYwLnBuZz9mPXdl/YnAmdz0yNTY" alt="YouTube" class="icon" /> YouTube
+      </button>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
